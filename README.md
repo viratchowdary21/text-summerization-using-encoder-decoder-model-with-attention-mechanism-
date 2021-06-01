@@ -1,1 +1,14 @@
-# text-summerization-using-encoder-decoder-model-with-attention-mechanism-
+# text-summerization-using-encoder-decoder-model-with-attention-mechanism
+
+## Introduction:
+Text summarization is one of a interesting application in NLP. There are two things we need to discuss first. One is data and evaluation. When we get some real tasks in our life, we should seriously pay attention and focus on data and evaluation. There is a quote that “A good algorithm can be beaten by most data and most data is always beaten by better data”. If you do not have good data and evaluation parameters, then stuck up with the worst results. In general, summarization can be done in many ways, one is sequence to sequence model. Summarization does not wary from machine translation since machine translation is bilingual or multilingual whereas summarization possesses any one kind of language (simply monolingual machine translation). Summarization is a task that summaries and gave an insightful analysis. Summarization can be done in several ways. Basically, there are two types, one is extractive, and another is abstractive summarization. Abstractive is like we just extract some pieces of the sentences in paragraphs or text and go beyond the whole text. Extractive is like that to generate some summary that does not go beyond the whole text. Both works based on the weights and rating (probability) given to the words in the context. When it comes to popularity Abstractive summarization is widely used since it summarizes in a way that recreates the sentences. We can convert the input to output (summary) by encoders and decoders.
+
+
+## Methodology:
+In this course work, we had been provided by a dataset consist of multiple columns (example based model) but we only considered two columns, they are text (X label) and summary (y label). We created a data frame for these to two columns. I have limited the dataset size to run fast, but its working fine with full dataset but takes longer run time. We preprocessed the data and cleaned data is get tokenized and then we split the train and test in 80/20 rule. Then the model is trained in batches. Later the trained data is subjected to be the input for the encoder. The encoder gave the byproduct as context vector. In attention mechanism the context vector pair up (multiplied) with attention weights and the output from the attention vector is pass down as input for the decoder. The decoder the decode the words based on id’s to words and extract the output. We have build some other models for summarization with some pre-trained models such as hugging face, BERT etc. 
+
+
+## Results:
+ Sorry for the mess in my output screen shoot. I added the print statements in the code to debug and I did not remove them because it explains how the model is extracting outputs. You can see this better in notebook.
+![image](https://user-images.githubusercontent.com/64622055/120254656-f1fabb00-c2a7-11eb-9379-023164cc1380.png)
+![image](https://user-images.githubusercontent.com/64622055/120254666-f7f09c00-c2a7-11eb-93e1-3e04339f9c85.png)
